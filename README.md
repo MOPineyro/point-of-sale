@@ -11,24 +11,24 @@ Store Inventory and Point of Sale System
 
 classes to define & possible methods:
 Store
-  has_many :products, through :inventory
-  has_many :product_categories, through :inventory
-  has_many :managers, through :employees
-  has_many :cashiers, through :employees
+  - has_many :products, through :inventory
+  - has_many :product_categories, through :inventory
+  - has_many :managers, through :employees
+  - has_many :cashiers, through :employees
 Inventory
-  has_many :products
-  has_many :product_categories
+  - has_many :products
+  - has_many :product_categories
 Employee
-  belongs_to :store
-  has_many :managers
-  has_many :cashiers
+  - belongs_to :store
+  - has_many :managers
+  - has_many :cashiers
 Departments???
-  belongs_to :store
-  has_many :products, through :inventory
-  has_many :product_categories, through :inventory
-  has_one :manager
+  - belongs_to :store
+  - has_many :products, through :inventory
+  - has_many :product_categories, through :inventory
+  - has_one :manager
 Manager
-  belongs_to :department
+  - belongs_to :department
 Customer
-belongs_to :store
-  has_many transactions, through :sale
+- belongs_to :store
+  - has_many transactions, through :sale
